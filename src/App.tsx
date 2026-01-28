@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react'
+import { Button } from './components/ui/button'
 
 const App: React.FC = () => {
-  return <div>App</div>;
-};
+  return <Button className="rounded-lg">App</Button>
+}
 
-export default App;
+export default App
