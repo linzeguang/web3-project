@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "lint:fix": "eslint src --fix",
-    "format": "prettier --write src",
-    "preview": "vite preview"
+    "format:fix": "prettier --write src",
+    "preview": "vite preview",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
@@ -43,5 +43,14 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
   }
 }
