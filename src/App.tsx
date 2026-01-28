@@ -1,11 +1,10 @@
+import { AppKitButton } from '@reown/appkit/react'
 import React from 'react'
-
-import { Button } from './components/ui/button'
 
 const App: React.FC = () => {
   return (
     <div>
-      <Button className="rounded">App</Button>
+      <AppKitButton />
     </div>
   )
 }
