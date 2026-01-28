@@ -37,7 +37,9 @@ export default defineConfig([
       'simple-import-sort/exports': 'error',
 
       // === react-refresh ===
-      'react-refresh/only-export-components': 'off'
+      'react-refresh/only-export-components': 'off',
+
+      'no-constant-binary-expression': 'off'
     },
     ignores: ['node_modules/**', 'dist/**', 'src/components/ui/**']
   }
