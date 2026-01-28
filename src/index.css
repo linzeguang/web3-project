@@ -3,14 +3,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --radius: 0.625rem; /* 10px */
+  --radius-xs: calc(var(--radius) - 0.5rem); /* 2px */
+  --radius-sm: calc(var(--radius) - 0.375rem); /* 4px */
+  --radius-md: calc(var(--radius) - 0.25rem); /* 6px */
+  --radius-lg: calc(var(--radius) - 0.125rem); /* 8px */
+  --radius-xl: calc(var(--radius) + 0.125rem); /* 12px */
+  --radius-2xl: calc(var(--radius) + 0.25rem); /* 14px */
+  --radius-3xl: calc(var(--radius) + 0.375rem); /* 16px */
+  --radius-4xl: calc(var(--radius) + 0.5rem); /* 18px */
+  --radius-5xl: calc(var(--radius) + 0.625rem); /* 20px */
+  --radius-6xl: calc(var(--radius) + 0.875rem); /* 24px */
+  --radius-7xl: calc(var(--radius) + 1.375rem); /* 32px */
+  --radius-8xl: calc(var(--radius) + 1.875rem); /* 40px */
+  --radius-9xl: calc(var(--radius) + 2.375rem); /* 48px */
+}
+
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -45,72 +55,71 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.21 0.006 285.885);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.705 0.015 286.067);
+  --background: rgb(255 255 255); /* 白色背景 */
+  --foreground: rgb(36 36 36); /* 深灰色前景 */
+  --card: rgb(255 255 255); /* 卡片背景 */
+  --card-foreground: rgb(36 36 36); /* 卡片前景 */
+  --popover: rgb(255 255 255); /* 弹出框背景 */
+  --popover-foreground: rgb(36 36 36); /* 弹出框前景 */
+  --primary: rgb(54 54 54); /* 主色调 */
+  --primary-foreground: rgb(251 251 251); /* 主色调前景 */
+  --secondary: rgb(246 246 246); /* 次色调 */
+  --secondary-foreground: rgb(54 54 54); /* 次色调前景 */
+  --muted: rgb(246 246 246); /* 柔和色 */
+  --muted-foreground: rgb(141 141 141); /* 柔和色前景 */
+  --accent: rgb(246 246 246); /* 强调色 */
+  --accent-foreground: rgb(54 54 54); /* 强调色前景 */
+  --destructive: rgb(147 100 76); /* 破坏性操作色 */
+  --border: rgb(234 234 234); /* 边框色 */
+  --input: rgb(234 234 234); /* 输入框色 */
+  --ring: rgb(180 180 180); /* 焦点环色 */
+  --chart-1: rgb(165 140 100); /* 图表色1 */
+  --chart-2: rgb(153 180 200); /* 图表色2 */
+  --chart-3: rgb(102 120 165); /* 图表色3 */
+  --chart-4: rgb(210 180 100); /* 图表色4 */
+  --chart-5: rgb(196 170 80); /* 图表色5 */
+  --sidebar: rgb(251 251 251); /* 侧边栏背景 */
+  --sidebar-foreground: rgb(36 36 36); /* 侧边栏前景 */
+  --sidebar-primary: rgb(54 54 54); /* 侧边栏主色 */
+  --sidebar-primary-foreground: rgb(251 251 251); /* 侧边栏主色前景 */
+  --sidebar-accent: rgb(246 246 246); /* 侧边栏强调色 */
+  --sidebar-accent-foreground: rgb(54 54 54); /* 侧边栏强调色前景 */
+  --sidebar-border: rgb(234 234 234); /* 侧边栏边框 */
+  --sidebar-ring: rgb(180 180 180); /* 侧边栏焦点环 */
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
+  --background: rgb(36 36 36); /* 深色背景 */
+  --foreground: rgb(251 251 251); /* 亮色前景 */
+  --card: rgb(54 54 54); /* 深色卡片 */
+  --card-foreground: rgb(251 251 251); /* 卡片前景 */
+  --popover: rgb(54 54 54); /* 深色弹出框 */
+  --popover-foreground: rgb(251 251 251); /* 弹出框前景 */
+  --primary: rgb(234 234 234); /* 深色主色 */
+  --primary-foreground: rgb(54 54 54); /* 主色前景 */
+  --secondary: rgb(70 70 70); /* 深色次色 */
+  --secondary-foreground: rgb(251 251 251); /* 次色前景 */
+  --muted: rgb(70 70 70); /* 深色柔和色 */
+  --muted-foreground: rgb(180 180 180); /* 柔和色前景 */
+  --accent: rgb(70 70 70); /* 深色强调色 */
+  --accent-foreground: rgb(251 251 251); /* 强调色前景 */
+  --destructive: rgb(179 135 115); /* 深色破坏色 */
+  --border: rgba(255, 255, 255, 0.1); /* 深色边框 */
+  --input: rgba(255, 255, 255, 0.15); /* 深色输入框 */
+  --ring: rgb(141 141 141); /* 深色焦点环 */
+  --chart-1: rgb(124 100 166); /* 深色图表1 */
+  --chart-2: rgb(177 165 210); /* 深色图表2 */
+  --chart-3: rgb(196 170 80); /* 深色图表3 */
+  --chart-4: rgb(160 100 200); /* 深色图表4 */
+  --chart-5: rgb(164 100 70); /* 深色图表5 */
+  --sidebar: rgb(54 54 54); /* 深色侧边栏 */
+  --sidebar-foreground: rgb(251 251 251); /* 侧边栏前景 */
+  --sidebar-primary: rgb(124 100 166); /* 侧边栏主色 */
+  --sidebar-primary-foreground: rgb(251 251 251); /* 侧边栏主色前景 */
+  --sidebar-accent: rgb(70 70 70); /* 侧边栏强调色 */
+  --sidebar-accent-foreground: rgb(251 251 251); /* 强调色前景 */
+  --sidebar-border: rgba(255, 255, 255, 0.1); /* 侧边栏边框 */
+  --sidebar-ring: rgb(141 141 141); /* 侧边栏焦点环 */
 }
 
 @layer base {
