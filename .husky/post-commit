@@ -1,0 +1,19 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+if [ -n "$LOCALE_AUTO_COMMIT" ]; then
+  exit 0
+fi
+
+yarn locale:extract
+
+yarn locale:compile
+
+if git diff --quiet -- public/locales; then
+  exit 0
+fi
+
+echo "🔄 Locale catalogs changed. Creating follow-up commit."
+
+git add public/locales
+LOCALE_AUTO_COMMIT=1 HUSKY=0 git commit -m "chore: update locale catalogs"
