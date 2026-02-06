@@ -1,36 +1,16 @@
+import { useAtomValue } from 'jotai/react'
 import React, {
   PropsWithChildren,
   useEffect,
   useLayoutEffect,
   useMemo
 } from 'react'
-import { useLocalStorage } from 'react-use'
 
-export enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark',
-  SYSTEM = 'system'
-}
-
-// Key to store the theme preference in localStorage
-export const THEME_STORAGE_KEY = 'theme'
-
-interface ThemeContextState {
-  theme?: Theme
-  setTheme: React.Dispatch<React.SetStateAction<Theme | undefined>>
-}
-
-const ThemeContext = React.createContext<ThemeContextState>(
-  {} as ThemeContextState
-)
-
-export const useTheme = () => React.useContext(ThemeContext)
+import { themeAtom } from '@/stores/app'
+import { Theme } from '@/stores/constants'
 
 const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage<Theme>(
-    THEME_STORAGE_KEY,
-    Theme.SYSTEM
-  )
+  const theme = useAtomValue(themeAtom)
 
   const systemIsDark = useMemo(() => {
     if (typeof window === 'undefined' || !window.matchMedia) {
@@ -81,11 +61,7 @@ const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }
   }, [theme])
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+  return children
 }
 
 export default ThemeProvider

@@ -1,24 +1,16 @@
 import React from 'react'
-import { Outlet } from 'react-router'
 
-import { Button } from '@/components/ui/button'
-import { Theme, useTheme } from '@/providers/ThemeProvider'
+import Footer from './Footer'
+import Header from './Header'
+import Main from './Main'
 
 const RootLayout: React.FC = () => {
-  const { setTheme } = useTheme()
-
   return (
-    <>
-      <header>
-        <Button onClick={() => setTheme(Theme.LIGHT)}>{Theme.LIGHT}</Button>
-        <Button onClick={() => setTheme(Theme.DARK)}>{Theme.DARK}</Button>
-        <Button onClick={() => setTheme(Theme.SYSTEM)}>{Theme.SYSTEM}</Button>
-      </header>
-      <main>
-        <Outlet />
-      </main>
-      <footer>header</footer>
-    </>
+    <section className="flex min-h-screen flex-col">
+      <Header />
+      <Main />
+      <Footer />
+    </section>
   )
 }
 

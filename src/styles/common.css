@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.viewport {
+  @apply px-4;
+}

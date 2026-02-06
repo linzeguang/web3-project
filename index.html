@@ -7,8 +7,7 @@
     <title>web3-project</title>
     <script>
       ;(() => {
-        const storageKey = 'theme'
-        const stored = window.localStorage.getItem(storageKey)
+        const stored = window.localStorage.getItem('app-theme')
         const systemDark =
           window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)').matches
