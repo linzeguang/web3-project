@@ -13,6 +13,38 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/common/ThemeToggle.tsx:34
+msgid "主题"
+msgstr "主题"
+
 #: src/App.tsx:12
-msgid "哈哈"
-msgstr "哈哈"
+#~ msgid "哈哈"
+#~ msgstr "哈哈"
+
+#: src/components/common/LanguageDrawer.tsx:35
+msgid "当前语言"
+msgstr "当前语言"
+
+#: src/components/common/LanguageDrawer.tsx:58
+msgid "当前选择"
+msgstr "当前选择"
+
+#: src/components/common/ThemeToggle.tsx:22
+msgid "浅色"
+msgstr "浅色"
+
+#: src/components/common/ThemeToggle.tsx:23
+msgid "深色"
+msgstr "深色"
+
+#: src/components/common/LanguageDrawer.tsx:43
+msgid "语言选择"
+msgstr "语言选择"
+
+#: src/components/common/ThemeToggle.tsx:21
+msgid "跟随系统"
+msgstr "跟随系统"
+
+#: src/components/common/NavDrawer.tsx:22
+msgid "首页"
+msgstr "首页"
