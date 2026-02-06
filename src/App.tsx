@@ -1,17 +1,20 @@
-import { Trans } from '@lingui/react/macro'
-import { AppKitButton } from '@reown/appkit/react'
 import React from 'react'
+import { RouterProvider } from 'react-router'
+import { ToastContainer } from 'react-toastify'
 
-import { Button } from './components/ui/button'
+import { router } from './routes'
 
 const App: React.FC = () => {
   return (
-    <div>
-      <AppKitButton />
-      <Button>
-        <Trans>哈哈</Trans>
-      </Button>
-    </div>
+    <>
+      <RouterProvider router={router} />
+      <ToastContainer
+        position="top-center"
+        hideProgressBar
+        closeOnClick
+        draggable
+      />
+    </>
   )
 }
 
