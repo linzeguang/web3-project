@@ -32,6 +32,7 @@ export default defineConfig((env) => {
       }
     },
     server: {
+      port: 8888,
       host: true
     }
   }
