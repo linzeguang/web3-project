@@ -39,6 +39,8 @@ export default defineConfig([
       // === react-refresh ===
       'react-refresh/only-export-components': 'off',
 
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
       'no-constant-binary-expression': 'off'
     },
     ignores: ['node_modules/**', 'dist/**', 'src/components/ui/**']

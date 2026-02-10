@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "prepare": "husky",
     "locale:extract": "npx lingui extract",
-    "locale:compile": "npx lingui compile"
+    "locale:compile": "npx lingui compile",
+    "create-api-json": "npx tsx scripts/create-api-json.ts"
   },
   "dependencies": {
     "@lingui/core": "^5.9.0",
@@ -20,6 +21,7 @@
     "@reown/appkit": "1.8.12",
     "@reown/appkit-adapter-wagmi": "1.8.12",
     "@tanstack/react-query": "5.90.5",
+    "axios": "^1.13.5",
     "bignumber.js": "^9.3.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@hey-api/openapi-ts": "^0.92.3",
     "@lingui/babel-plugin-lingui-macro": "^5.9.0",
     "@lingui/vite-plugin": "^5.9.0",
     "@tailwindcss/vite": "^4.1.18",
