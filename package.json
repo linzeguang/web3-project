@@ -11,7 +11,7 @@
     "prepare": "husky",
     "locale:extract": "npx lingui extract",
     "locale:compile": "npx lingui compile",
-    "create-api-json": "npx tsx scripts/create-api-json.ts"
+    "create-api-json": "npx tsx scripts/create-api-json.ts & npx openapi-ts"
   },
   "dependencies": {
     "@lingui/core": "^5.9.0",

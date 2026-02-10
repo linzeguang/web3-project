@@ -33,7 +33,14 @@ export default defineConfig((env) => {
     },
     server: {
       port: 8888,
-      host: true
+      host: true,
+      proxy: {
+        '^/api': {
+          changeOrigin: true,
+          target: 'https://petstore.swagger.io/v2',
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
     }
   }
 })
