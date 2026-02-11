@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React, { type PropsWithChildren } from 'react'
 import { WagmiProvider } from 'wagmi'
 
-import { metadata, networks, projectId, wagmiAdapter } from '@/constants/wallet'
+import { metadata, networks, projectId, wagmiAdapter } from '@/libs/reown'
 
 const queryClient = new QueryClient()
 
@@ -13,7 +13,7 @@ createAppKit({
   networks,
   metadata,
   features: {
-    analytics: false // Optional - defaults to your Cloud configuration
+    analytics: true // Optional - defaults to your Cloud configuration
   },
   enableCoinbase: false,
   enableWalletGuide: false

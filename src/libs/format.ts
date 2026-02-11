@@ -33,7 +33,10 @@ export function formatAddress(
  * @param format - 格式字符串，默认为 "MM-DD-YYYY HH:mm:ss"
  * @returns 格式化后的时间字符串
  */
-export function formatDate(date: string | number | Date, format: string = 'MM-DD-YYYY HH:mm:ss'): string {
+export function formatDate(
+  date: string | number | Date,
+  format: string = 'MM-DD-YYYY HH:mm:ss'
+): string {
   return dayjs(date).format(format)
 }
 
@@ -68,7 +71,10 @@ export function formatThousands(
  * @param decimalPlaces - 保留小数位数，默认为 2
  * @returns 格式化后的字符串，如 "1.23K", "4.56M", "7.89B", "0.0₅1"
  */
-export function formatShortNumber(value: BigNumber.Value, decimalPlaces: number = 2): string {
+export function formatShortNumber(
+  value: BigNumber.Value,
+  decimalPlaces: number = 2
+): string {
   const num = new BigNumber(value)
   const absNum = num.abs()
 

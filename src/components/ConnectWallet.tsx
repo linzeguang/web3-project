@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { Address } from 'viem'
 import { useBalance } from 'wagmi'
 
-import { formatAddress } from '@/lib/format'
+import { formatAddress } from '@/libs/format'
 
 import { Button } from './ui/button'
 

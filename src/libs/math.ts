@@ -37,20 +37,30 @@ export function multiply(a: BigNumber.Value, b: BigNumber.Value): string {
  * @param decimalPlaces - 保留小数位数，默认为 18
  * @returns 运算结果
  */
-export function divide(a: BigNumber.Value, b: BigNumber.Value, decimalPlaces: number = 18): string {
+export function divide(
+  a: BigNumber.Value,
+  b: BigNumber.Value,
+  decimalPlaces: number = 18
+): string {
   return new BigNumber(a).dividedBy(b).toFixed(decimalPlaces)
 }
 
 /**
  * 四舍五入
  */
-export function round(value: BigNumber.Value, decimalPlaces: number = 2): string {
+export function round(
+  value: BigNumber.Value,
+  decimalPlaces: number = 2
+): string {
   return new BigNumber(value).toFixed(decimalPlaces, BigNumber.ROUND_HALF_UP)
 }
 
 /**
  * 不四舍五入（直接截断）
  */
-export function truncate(value: BigNumber.Value, decimalPlaces: number = 2): string {
+export function truncate(
+  value: BigNumber.Value,
+  decimalPlaces: number = 2
+): string {
   return new BigNumber(value).toFixed(decimalPlaces, BigNumber.ROUND_DOWN)
 }
