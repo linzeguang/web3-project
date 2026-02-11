@@ -13,6 +13,14 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/common/Dialog.tsx:39
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/common/Dialog.tsx:38
+msgid "Confirm"
+msgstr "Confirm"
+
 #: src/components/common/ThemeToggle.tsx:34
 msgid "主题"
 msgstr "主题"
