@@ -1,4 +1,4 @@
-import { CreateClientConfig } from './services/client'
+import { CreateClientConfig } from '../services/client'
 
 export const createClientConfig: CreateClientConfig = (config) => ({
   ...config,

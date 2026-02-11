@@ -22,10 +22,7 @@ createAppKit({
 const WalletProvider: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <WagmiProvider config={wagmiAdapter.wagmiConfig}>
-      <QueryClientProvider client={queryClient}>
-        <appkit-button />
-        {children}
-      </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
   )
 }
