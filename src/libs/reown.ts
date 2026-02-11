@@ -1,4 +1,4 @@
-import { AppKitNetwork, bscTestnet, mainnet } from '@reown/appkit/networks'
+import { AppKitNetwork, bscTestnet } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 export const projectId = import.meta.env.VITE_PROJECT_ID || ''
@@ -14,10 +14,7 @@ export const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 
-export const networks: [AppKitNetwork, ...AppKitNetwork[]] = [
-  mainnet,
-  bscTestnet
-]
+export const networks: [AppKitNetwork, ...AppKitNetwork[]] = [bscTestnet]
 
 export const wagmiAdapter = new WagmiAdapter({
   projectId,
