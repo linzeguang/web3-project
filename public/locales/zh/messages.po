@@ -21,7 +21,7 @@ msgstr "Cancel"
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/components/common/ThemeToggle.tsx:34
+#: src/components/ThemeToggle.tsx:34
 msgid "主题"
 msgstr "主题"
 
@@ -29,30 +29,34 @@ msgstr "主题"
 #~ msgid "哈哈"
 #~ msgstr "哈哈"
 
-#: src/components/common/LanguageDrawer.tsx:35
+#: src/components/LanguageDrawer.tsx:35
 msgid "当前语言"
 msgstr "当前语言"
 
-#: src/components/common/LanguageDrawer.tsx:58
+#: src/components/LanguageDrawer.tsx:58
 msgid "当前选择"
 msgstr "当前选择"
 
-#: src/components/common/ThemeToggle.tsx:22
+#: src/components/NavDrawer.tsx:24
+msgid "池子"
+msgstr "池子"
+
+#: src/components/ThemeToggle.tsx:22
 msgid "浅色"
 msgstr "浅色"
 
-#: src/components/common/ThemeToggle.tsx:23
+#: src/components/ThemeToggle.tsx:23
 msgid "深色"
 msgstr "深色"
 
-#: src/components/common/LanguageDrawer.tsx:43
+#: src/components/LanguageDrawer.tsx:43
 msgid "语言选择"
 msgstr "语言选择"
 
-#: src/components/common/ThemeToggle.tsx:21
+#: src/components/ThemeToggle.tsx:21
 msgid "跟随系统"
 msgstr "跟随系统"
 
-#: src/components/common/NavDrawer.tsx:22
+#: src/components/NavDrawer.tsx:23
 msgid "首页"
 msgstr "首页"
