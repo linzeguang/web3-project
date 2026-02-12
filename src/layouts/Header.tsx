@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavDrawer from '@/components/common/NavDrawer'
 import ConnectWallet from '@/components/ConnectWallet'
+import NavDrawer from '@/components/NavDrawer'
 
 const Header: React.FC = () => {
   return (

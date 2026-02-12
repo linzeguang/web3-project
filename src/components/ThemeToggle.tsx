@@ -6,7 +6,7 @@ import React from 'react'
 import { themeAtom } from '@/stores/app'
 import { Theme } from '@/stores/constants'
 
-import { Button } from '../ui/button'
+import { Button } from './ui/button'
 
 const themeOrder: Theme[] = [Theme.SYSTEM, Theme.LIGHT, Theme.DARK]
 

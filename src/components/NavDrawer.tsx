@@ -6,6 +6,8 @@ import { Link } from 'react-router'
 import logoSrc from '@/assets/react.svg'
 import { RuotePath } from '@/routes'
 
+import LanguageDrawer from './LanguageDrawer'
+import ThemeToggle from './ThemeToggle'
 import {
   Drawer,
   DrawerClose,
@@ -14,12 +16,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger
-} from '../ui/drawer'
-import LanguageDrawer from './LanguageDrawer'
-import ThemeToggle from './ThemeToggle'
+} from './ui/drawer'
 
 const NavDrawer: React.FC = () => {
-  const items = [{ label: t`首页`, to: RuotePath.HOME }]
+  const items = [
+    { label: t`首页`, to: RuotePath.HOME },
+    { label: t`池子`, to: RuotePath.POOL }
+  ]
 
   return (
     <Drawer direction="left">

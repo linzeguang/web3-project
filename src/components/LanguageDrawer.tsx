@@ -5,7 +5,7 @@ import React from 'react'
 import { Locale, LOCALES } from '@/i18n'
 import { localeAtom } from '@/stores/app'
 
-import { Button } from '../ui/button'
+import { Button } from './ui/button'
 import {
   Drawer,
   DrawerClose,
@@ -13,7 +13,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger
-} from '../ui/drawer'
+} from './ui/drawer'
 
 const LanguageDrawer: React.FC = () => {
   const [locale, setLocale] = useAtom(localeAtom)

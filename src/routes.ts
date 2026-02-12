@@ -2,7 +2,8 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router'
 
 export enum RuotePath {
-  HOME = '/'
+  HOME = '/',
+  POOL = '/pool'
 }
 
 export const router = createBrowserRouter([
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: React.lazy(() => import('./pages/home'))
+      },
+      {
+        path: RuotePath.POOL,
+        Component: React.lazy(() => import('./pages/pool'))
       }
     ]
   }
